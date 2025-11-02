@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="Hotels.xsd">
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="Hotels.xsd">
 
+  <!-- Valid hotel (for baseline) -->
   <Hotel Rating="4.5">
     <Name>Westin Tempe</Name>
     <Phone>4809688885</Phone>
@@ -16,6 +17,7 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR #5: duplicate <Name> elements -->
   <Hotel Rating="4.1">
     <Name>Hyatt Place Tempe/Phoenix Airport</Name>
     <Name>Hyatt Place Tempe/Phoenix Airport</Name>
@@ -31,6 +33,7 @@
     </Address>
   </Hotel>
 
+  <!-- Valid hotel (no Rating to exercise optional attribute) -->
   <Hotel>
     <Name>Graduate Tempe</Name>
     <Phone>4809679431</Phone>
@@ -44,6 +47,8 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR #2: missing required <Name>
+       ERROR #4: missing </Address> (single well-formedness error) -->
   <Hotel Rating="4.3">
     <Phone>4808941400</Phone>
     <Phone>8005478705</Phone>
@@ -56,6 +61,7 @@
       <NearestAirport>Sky Harbor</NearestAirport>
   </Hotel>
 
+  <!-- Valid -->
   <Hotel Rating="4.0">
     <Name>Aloft Tempe</Name>
     <Phone>4806213300</Phone>
@@ -69,6 +75,7 @@
     </Address>
   </Hotel>
 
+  <!-- Valid -->
   <Hotel>
     <Name>Courtyard by Marriott Tempe Downtown</Name>
     <Phone>4809662800</Phone>
@@ -82,9 +89,9 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR #3: no <Phone> at all (violates minOccurs="1") -->
   <Hotel Rating="4.2">
     <Name>Hilton Garden Inn Phoenix-Tempe ASU Area</Name>
-    <Phone>4809682424</Phone>
     <Address>
       <Number>2102</Number>
       <Street>E Rio Salado Pkwy</Street>
@@ -95,6 +102,7 @@
     </Address>
   </Hotel>
 
+  <!-- Valid -->
   <Hotel Rating="4.4">
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
     <Phone>4806426140</Phone>
@@ -108,6 +116,7 @@
     </Address>
   </Hotel>
 
+  <!-- Valid -->
   <Hotel>
     <Name>Moxy Phoenix Tempe/ASU Area</Name>
     <Phone>4808655700</Phone>
@@ -121,6 +130,7 @@
     </Address>
   </Hotel>
 
+  <!-- Valid -->
   <Hotel Rating="4.3">
     <Name>Residence Inn Tempe Downtown/University</Name>
     <Phone>4809672300</Phone>
