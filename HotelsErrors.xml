@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+<Hotel xmlns="http://venus.sod.asu.edu/WSRepository/xml"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://venus.sod.asu.edu/WSRepository/xml https://mesh-ux.github.io/cse445-a4/Hotels.xsd">
 
   <!-- Valid hotel (for baseline) -->
   <Hotel Rating="4.5">
